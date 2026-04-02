@@ -2,7 +2,7 @@
 each task in appropriate branch
 tasks will be added as they started
 list of completed tasks:
-- [ ] 1
+- [V] 1
 - [ ] 2
 - [ ] 3
 - [ ] 4

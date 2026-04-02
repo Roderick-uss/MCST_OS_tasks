@@ -6,7 +6,7 @@ S_PREFIX = sources/
 H_PREFIX = headers/
 T_PREFIX = text_file/
 
-SOURCES = main
+SOURCES = main thread_sort
 
 OBJECTS := $(patsubst %,$(O_PREFIX)%.o,$(SOURCES))
 
@@ -15,7 +15,7 @@ HEADER_LIST = $(H_PREFIX)*.h
 all: main
 
 run: main
-	@./$(B_PREFIX)main
+	@./$(B_PREFIX)main $(threads)
 
 main: $(OBJECTS)
 	@mkdir -p $(B_PREFIX)

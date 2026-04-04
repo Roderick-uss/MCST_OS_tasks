@@ -6,7 +6,9 @@ S_PREFIX = sources/
 H_PREFIX = headers/
 T_PREFIX = text_file/
 
-SOURCES = main
+F_PREFIX = fifo/
+
+SOURCES = main chat
 
 OBJECTS := $(patsubst %,$(O_PREFIX)%.o,$(SOURCES))
 
@@ -15,7 +17,11 @@ HEADER_LIST = $(H_PREFIX)*.h
 all: main
 
 run: main
-	@./$(B_PREFIX)main
+	@./$(B_PREFIX)main $(F_PREFIX)$(fifo).fifo
+
+fifo:
+	@mkdir -p $(F_PREFIX)
+	@mkfifo $(F_PREFIX)$(fifo).fifo
 
 main: $(OBJECTS)
 	@mkdir -p $(B_PREFIX)

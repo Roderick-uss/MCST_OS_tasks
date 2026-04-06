@@ -6,6 +6,8 @@
 #include <string.h>
 #include <fcntl.h>
 #include <sys/stat.h>
+#include <errno.h>
+#include <unistd.h>
 
 #include "text.h"
 

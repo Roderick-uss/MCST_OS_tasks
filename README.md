@@ -3,8 +3,8 @@ each task in appropriate branch
 tasks will be added as they started
 list of completed tasks:
 - [X] 1
-- [ ] 2
-- [ ] 3
+- [X] 2
+- [X] 3
 - [ ] 4
 - [ ] 5
 - [ ] 6

@@ -4,9 +4,9 @@
 #include <unistd.h>
 #include <signal.h>
 
+#define MATRIX_SIZE 100
 #define ARG_SIGNAL    "--signal"
 #define ARG_SIGACTION "--sigaction"
-#define MATRIX_SIZE 100
 
 enum signal_type_t {
     TYPE_SIGNAL=0,
@@ -22,6 +22,6 @@ struct matrix_iterator_t {
 };
 
 
-int calculate_matrix(enum signal_type_t sig);
+int calculate_matrix_signal(enum signal_type_t sig);
 
 #endif//__MATRIX__

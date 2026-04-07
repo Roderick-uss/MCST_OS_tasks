@@ -27,7 +27,23 @@ int *string_to_int_list (char *line, size_t *list_size) {
 
     return list;
 }
-int get_lis (int *list, size_t list_size, size_t *begin_idx, size_t *end_idx);
+void get_lis (int *list, size_t list_size, size_t *begin_idx, size_t *end_idx) {
+    size_t ans_end_pos = 1;
+    size_t ans_len = 1;
+
+    for (size_t pos = 0, prev_len = 0; pos < list_size; ++pos) {
+        if (pos == 0 || list[pos] > list[pos-1]) {
+            prev_len++;
+            if (prev_len > ans_len) {
+                ans_end_pos = pos + 1;
+                ans_len = prev_len;
+            }
+        } else prev_len = 1;
+    }
+
+    *begin_idx = ans_end_pos - ans_len;
+    *end_idx = ans_end_pos;
+}
 
 int main() {
     char *line;
@@ -38,9 +54,10 @@ int main() {
 
     free(line);
     if (list == NULL) return -1;
+    if (list_size == 0) {putc('\n', stdout); return 0;}
 
-    size_t begin_idx = 0, end_idx = list_size;
-    // get_lis(list, list_size, &begin_idx, &end_idx);
+    size_t begin_idx, end_idx;
+    get_lis(list, list_size, &begin_idx, &end_idx);
 
     for (size_t idx = begin_idx; idx < end_idx - 1; ++idx) {
         printf("%d ", list[idx]);

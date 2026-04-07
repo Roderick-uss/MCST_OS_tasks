@@ -6,16 +6,16 @@ S_PREFIX = sources/
 H_PREFIX = headers/
 T_PREFIX = text_file/
 
-SOURCES = main
+SOURCES = main fork_copy
 
 OBJECTS := $(patsubst %,$(O_PREFIX)%.o,$(SOURCES))
 
 HEADER_LIST = $(H_PREFIX)*.h
 
-all: main fork_copy
+all: main
 
 run: main
-	@./$(B_PREFIX)main
+	@./$(B_PREFIX)main $(file)
 
 main: $(OBJECTS)
 	@mkdir -p $(B_PREFIX)

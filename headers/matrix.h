@@ -6,6 +6,7 @@
 
 #define ARG_SIGNAL    "--signal"
 #define ARG_SIGACTION "--sigaction"
+#define MATRIX_SIZE 100
 
 enum signal_type_t {
     TYPE_SIGNAL=0,

@@ -15,7 +15,7 @@ HEADER_LIST = $(H_PREFIX)*.h
 all: main
 
 run: main
-	@./$(B_PREFIX)main
+	@./$(B_PREFIX)main $(opt)
 
 main: $(OBJECTS)
 	@mkdir -p $(B_PREFIX)

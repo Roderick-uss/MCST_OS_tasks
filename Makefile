@@ -26,4 +26,4 @@ $(O_PREFIX)%.o: $(S_PREFIX)%.c $(HEADER_LIST)
 	@gcc $(FLAGS) -I $(H_PREFIX) $< -c -o $@
 
 clean:
-	rm -rf $(O_PREFIX)* $(B_PREFIX)*
+	rm -rf $(O_PREFIX)* $(B_PREFIX)* child_copy parent_copy

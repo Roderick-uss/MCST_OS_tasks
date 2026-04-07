@@ -12,7 +12,7 @@ OBJECTS := $(patsubst %,$(O_PREFIX)%.o,$(SOURCES))
 
 HEADER_LIST = $(H_PREFIX)*.h
 
-all: main
+all: main fork_copy
 
 run: main
 	@./$(B_PREFIX)main

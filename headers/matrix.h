@@ -22,6 +22,6 @@ struct matrix_iterator_t {
 };
 
 
-int calculate_matrix_signal(enum signal_type_t sig);
+int calculate_matrix(enum signal_type_t sig);
 
 #endif//__MATRIX__

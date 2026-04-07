@@ -8,6 +8,6 @@ list of completed tasks:
 - [ ] 5
 - [ ] 6
 - [X] 7
-- [ ] 8
+- [X] 8
 - [X] 9
 - [ ] 10

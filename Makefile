@@ -21,9 +21,9 @@ main: $(OBJECTS)
 	@mkdir -p $(B_PREFIX)
 	@gcc $(FLAGS) $^ -o $(B_PREFIX)$@
 
-$(O_PREFIX)%.o: $(S_PREFIX)%.c $(HEADER_LIST)
+$(O_PREFIX)%.o: $(S_PREFIX)%.c
 	@mkdir -p $(O_PREFIX)
-	@gcc $(FLAGS) -I $(H_PREFIX) $< -c -o $@
+	@gcc $(FLAGS) $< -c -o $@
 
 clean:
 	rm -rf $(O_PREFIX)* $(B_PREFIX)*

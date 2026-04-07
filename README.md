@@ -9,5 +9,5 @@ list of completed tasks:
 - [ ] 6
 - [ ] 7
 - [ ] 8
-- [ ] 9
+- [X] 9
 - [ ] 10

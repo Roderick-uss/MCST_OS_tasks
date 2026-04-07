@@ -1,6 +1,5 @@
 # MCST_OS_tasks
-each task in appropriate branch
-tasks will be added as they started
+each task in appropriate branch <br>
 list of completed tasks:
 - [X] 1
 - [X] 2

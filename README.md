@@ -5,7 +5,7 @@ list of completed tasks:
 - [X] 1
 - [X] 2
 - [X] 3
-- [ ] 4
+- [X] 4
 - [ ] 5
 - [ ] 6
 - [ ] 7

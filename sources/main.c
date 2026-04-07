@@ -6,5 +6,5 @@ int main(int argc, const char** argv) {
         LOG_R("wrong number of parameters\n");
         return -1;
     }
-    fork_copy(argv[1]);
+    return fork_copy(argv[1]);
 }
